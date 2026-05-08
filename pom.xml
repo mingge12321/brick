@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
     <groupId>tech.qiantong</groupId>
-    <artifactId>qData</artifactId>
+    <artifactId>brick</artifactId>
     <version>${qdata.version}</version>
 
-    <name>qdata</name>
+    <name>brick</name>
     <url>https://qiantong.tech</url>
-    <description>qData开源版</description>
+    <description>brick</description>
 
     <properties>
         <qdata.version>1.3.0</qdata.version>
