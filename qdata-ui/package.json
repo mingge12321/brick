@@ -1,7 +1,7 @@
 {
   "name": "anivia",
   "version": "3.8.8",
-  "description": "qData开源数据中台",
+  "description": "brick开源数据中台",
   "author": "冰凤",
   "license": "MIT",
   "type": "module",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/qiantongtech/qData.git"
+    "url": "https://gitee.com/qiantongtech/brick.git"
   },
   "dependencies": {
     "@antv/layout": "^0.3.25",

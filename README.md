@@ -4,10 +4,10 @@
  <img src="https://img.shields.io/badge/Spring%20Boot-2.5.15-blue.svg" alt="Downloads">
  <img src="https://img.shields.io/badge/Vue-3.4.31-blue.svg" alt="Downloads">
  <img src="https://img.shields.io/badge/license-Apache--2.0-green"/>
- <img src="https://img.shields.io/badge/qData-v1.3.0-blue.svg"/>
+ <img src="https://img.shields.io/badge/brick-v1.3.0-blue.svg"/>
 
- <img src="https://gitee.com/qiantongtech/qData/badge/star.svg"/>
- <img src="https://img.shields.io/github/stars/qiantongtech/qData?label=Github%20Stars"/>
+ <img src="https://gitee.com/qiantongtech/brick/badge/star.svg"/>
+ <img src="https://img.shields.io/github/stars/qiantongtech/brick?label=Github%20Stars"/>
 </p>
 
 <p align="center">
@@ -16,19 +16,19 @@
 
 
 ## 🌈 平台简介
-**qData 数据中台**是一套面向企业数据治理与数据研发场景的开源数据中台，围绕 **ETL 数据集成、数据开发、数据建模、元数据管理、数据质量、数据资产、API 数据服务与 AI 智能问数**等核心能力，支持 MySQL、DM8、Oracle、SQL Server、Kingbase8、Doris 等常用数据库接入，帮助企业快速完成数据接入、清洗转换、资产编目、质量检查、接口开放和 Text2SQL 分析，可作为企业建设数据中台、数据治理平台、ETL 平台和数据服务平台的开源基础底座，也适合开发者进行二次开发与功能扩展。
+**brick 数据中台**是一套面向企业数据治理与数据研发场景的开源数据中台，围绕 **ETL 数据集成、数据开发、数据建模、元数据管理、数据质量、数据资产、API 数据服务与 AI 智能问数**等核心能力，支持 MySQL、DM8、Oracle、SQL Server、Kingbase8、Doris 等常用数据库接入，帮助企业快速完成数据接入、清洗转换、资产编目、质量检查、接口开放和 Text2SQL 分析，可作为企业建设数据中台、数据治理平台、ETL 平台和数据服务平台的开源基础底座，也适合开发者进行二次开发与功能扩展。
 
 ✨✨✨**在线文档**✨✨✨ <a href="https://community.qdata.tech" target="_blank">https://community.qdata.tech</a> 
 
-✨✨✨**开源版演示地址**✨✨✨ <a href="https://demo.qdata.tech" target="_blank">https://demo.qdata.tech</a> ，账号：qData 密码：qData123
+✨✨✨**开源版演示地址**✨✨✨ <a href="https://demo.qdata.tech" target="_blank">https://demo.qdata.tech</a> ，账号：brick 密码：brick123
 
 ✨✨✨**专业版演示地址**✨✨✨ <a href="https://pro-demo.qdata.tech" target="_blank">https://pro-demo.qdata.tech</a> ，演示账号请 [联系客服获取](https://community.qdata.tech/business/policy.html)
 
-> 如果 qData 对您有帮助，请点个 **Star ⭐️**，这是我们持续更新的最大动力！ 🚀
+> 如果 brick 对您有帮助，请点个 **Star ⭐️**，这是我们持续更新的最大动力！ 🚀
 
 ## 🍱 使用场景
 
-qData 开源版适用于企业、政府机构、科研院校及开发团队建设数据中台、ETL 数据集成、数据治理、数据资产管理与数据服务能力，也可作为数据治理平台或数据研发平台的二次开发底座。
+brick 开源版适用于企业、政府机构、科研院校及开发团队建设数据中台、ETL 数据集成、数据治理、数据资产管理与数据服务能力，也可作为数据治理平台或数据研发平台的二次开发底座。
 
 | 场景 | 描述 | 典型客户类型 |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ qData 开源版适用于企业、政府机构、科研院校及开发团队建�
 | **基础管理** | 支持数据源、项目空间、类目、稽查规则、清洗规则等基础配置，为数据研发和数据治理提供支撑。 |
 | **系统管理** | 支持用户、角色、菜单、部门、岗位、字典、参数、公告和日志等基础系统管理能力。 |
 
-👉 qData 数据中台采用模块化设计，当前开源版聚焦数据集成、数据开发、数据建模、元数据、数据质量、数据资产、数据服务和智能问数等核心能力。更多功能可参考：[qData 功能清单总览](https://community.qdata.tech/docs/start/features.html)
+👉 brick 数据中台采用模块化设计，当前开源版聚焦数据集成、数据开发、数据建模、元数据、数据质量、数据资产、数据服务和智能问数等核心能力。更多功能可参考：[brick 功能清单总览](https://community.qdata.tech/docs/start/features.html)
 
 ## 🚧 未来开发计划
 
@@ -88,13 +88,13 @@ qData 开源版适用于企业、政府机构、科研院校及开发团队建�
 | **数据服务增强** | 优化 API 服务发布、接口测试、调用日志、应用授权和限流控制能力，提升数据服务开放体验。 |
 | **AI 能力增强** | 持续优化 Text2SQL、智能图表、问数结果解释和数据洞察能力，提升自然语言分析体验。 |
 
-💡 如您有好的建议或功能需求，欢迎 [提交 Issue](https://gitee.com/qiantongtech/qData/issues)，与我们共同完善 qData 数据中台。
+💡 如您有好的建议或功能需求，欢迎 [提交 Issue](https://gitee.com/qiantongtech/brick/issues)，与我们共同完善 brick 数据中台。
 [//]: # (## 🧩 架构图)
 
 [//]: # (![framework.png]&#40;images%2Fframework.png&#41;)
 
 ## 🛠️ 技术栈
-qData 平台采用前后端分离架构，后端基于 Spring Boot，前端基于 Vue 3，并整合了部分主流中间件与数据工具。
+brick 平台采用前后端分离架构，后端基于 Spring Boot，前端基于 Vue 3，并整合了部分主流中间件与数据工具。
 
 <table>
   <tr>
@@ -146,7 +146,7 @@ qData 平台采用前后端分离架构，后端基于 Spring Boot，前端基�
 
 ## 🏗️ 部署要求
 
-在部署 qData 之前，请确保以下环境和工具已正确安装：
+在部署 brick 之前，请确保以下环境和工具已正确安装：
 
 <table>
   <tr>
@@ -185,7 +185,7 @@ qData 平台采用前后端分离架构，后端基于 Spring Boot，前端基�
 
 ## 🚨 商用授权
 
-qData 提供 **专业版** 与 **开源版** 两种形态，满足不同规模与场景下的用户需求。两者既各具特色，又形成互补：开源版更像启蒙老师，帮助低成本起步；专业版更像专家顾问，提供深度与保障。无论选择哪种版本，qData 都将成为可靠的伙伴，帮助企业释放数据价值，加速数字化进程。
+brick 提供 **专业版** 与 **开源版** 两种形态，满足不同规模与场景下的用户需求。两者既各具特色，又形成互补：开源版更像启蒙老师，帮助低成本起步；专业版更像专家顾问，提供深度与保障。无论选择哪种版本，brick 都将成为可靠的伙伴，帮助企业释放数据价值，加速数字化进程。
 
 👉 如需 **开源版品牌授权** 或 **咨询专业版**，请点击按钮查看详情：[💼 了解授权详情](https://community.qdata.tech/business/policy.html)
 
@@ -193,14 +193,14 @@ qData 提供 **专业版** 与 **开源版** 两种形态，满足不同规模�
 
 | 部署方式                    | 说明                                                              | 适用场景               |
 | ----------------------- | --------------------------------------------------------------- | ------------------ |
-| [Docker Compose 部署](https://community.qdata.tech/docs/deploy/docker-compose-deployment.html) | 所有组件（调度器、数据库、消息队列、Spark、Flink 等）以及 qData 数据中台源码都通过 Docker Compose 一键启动 | **初学者快速上手**、功能演示、测试环境  |
-| [使用源代码本地启动](https://community.qdata.tech/docs/deploy/build-from-source.html)  | qData 数据中台源码由开发者本地运行，依赖组件通过 Docker Compose 启动  | **日常开发**、功能联调          |
-| [自主部署（纯手工安装）](https://community.qdata.tech/docs/deploy/manual-deployment/)  | 所有依赖组件及 qData 数据中台服务均需手工安装和配置  | **生产环境**、大规模部署、个性化定制场景 |
+| [Docker Compose 部署](https://community.qdata.tech/docs/deploy/docker-compose-deployment.html) | 所有组件（调度器、数据库、消息队列、Spark、Flink 等）以及 brick 数据中台源码都通过 Docker Compose 一键启动 | **初学者快速上手**、功能演示、测试环境  |
+| [使用源代码本地启动](https://community.qdata.tech/docs/deploy/build-from-source.html)  | brick 数据中台源码由开发者本地运行，依赖组件通过 Docker Compose 启动  | **日常开发**、功能联调          |
+| [自主部署（纯手工安装）](https://community.qdata.tech/docs/deploy/manual-deployment/)  | 所有依赖组件及 brick 数据中台服务均需手工安装和配置  | **生产环境**、大规模部署、个性化定制场景 |
 
 👉 查看完整的安装与部署指南：<a href="https://community.qdata.tech/docs/deploy/deploy-open-source.html">🧭 点击查看详细部署步骤</a>
 
 ## 👥 QQ交流群
-欢迎加入 qData 官方 QQ 交流群，获取最新动态、技术支持与使用交流。
+欢迎加入 brick 官方 QQ 交流群，获取最新动态、技术支持与使用交流。
 
 👉 <a href="https://community.qdata.tech/discuss.html">点击加入 QQ 交流群</a>
 
