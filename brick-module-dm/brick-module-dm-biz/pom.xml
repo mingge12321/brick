@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>brick-module-dm</artifactId>
+        <groupId>tech.gjsl</groupId>
+        <version>${qdata.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>brick-module-dm-biz</artifactId>
+
+    <description>
+        system系统模块
+    </description>
+
+    <dependencies>
+        <!-- 核心模块 config-->
+        <dependency>
+            <groupId>tech.gjsl</groupId>
+            <artifactId>brick-config</artifactId>
+            <version>${qdata.version}</version>
+        </dependency>
+
+        <!-- 系統模块 websocket-->
+        <dependency>
+            <groupId>tech.gjsl</groupId>
+            <artifactId>brick-websocket</artifactId>
+            <version>${qdata.version}</version>
+        </dependency>
+
+        <!-- 系统模块 brick-security -->
+        <dependency>
+            <groupId>tech.gjsl</groupId>
+            <artifactId>brick-security</artifactId>
+            <version>${qdata.version}</version>
+        </dependency>
+
+        <!-- 系统模块 mybatis -->
+        <dependency>
+            <groupId>tech.gjsl</groupId>
+            <artifactId>brick-mybatis</artifactId>
+            <version>${qdata.version}</version>
+        </dependency>
+
+        <!-- 系统模块 redis -->
+        <dependency>
+            <groupId>tech.gjsl</groupId>
+            <artifactId>brick-redis</artifactId>
+            <version>${qdata.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>tech.gjsl</groupId>
+            <artifactId>brick-module-dm-api</artifactId>
+            <version>${qdata.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+</project>

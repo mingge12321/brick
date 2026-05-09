@@ -165,35 +165,35 @@
             <!-- 定时任务-->
             <dependency>
                 <groupId>tech.gjsl</groupId>
-                <artifactId>qdata-quartz</artifactId>
+                <artifactId>brick-quartz</artifactId>
                 <version>${qdata.version}</version>
             </dependency>
 
             <!-- 代码生成-->
             <dependency>
                 <groupId>tech.gjsl</groupId>
-                <artifactId>qdata-generator</artifactId>
+                <artifactId>brick-generator</artifactId>
                 <version>${qdata.version}</version>
             </dependency>
 
             <!-- 核心模块-->
             <dependency>
                 <groupId>tech.gjsl</groupId>
-                <artifactId>qdata-framework</artifactId>
+                <artifactId>brick-framework</artifactId>
                 <version>${qdata.version}</version>
             </dependency>
 
             <!-- 系统模块-->
             <dependency>
                 <groupId>tech.gjsl</groupId>
-                <artifactId>qdata-module-system</artifactId>
+                <artifactId>brick-module-system</artifactId>
                 <version>${qdata.version}</version>
             </dependency>
 
             <!-- 通用工具-->
             <dependency>
                 <groupId>tech.gjsl</groupId>
-                <artifactId>qdata-common</artifactId>
+                <artifactId>brick-common</artifactId>
                 <version>${qdata.version}</version>
             </dependency>
 
@@ -201,19 +201,19 @@
     </dependencyManagement>
 
     <modules>
-        <module>qdata-framework</module>
-        <module>qdata-module-system</module>
-        <module>qdata-server</module>
-        <module>qdata-module-att</module>
-        <module>qdata-module-dp</module>
-        <module>qdata-module-dpp</module>
-        <module>qdata-module-da</module>
-        <module>qdata-module-ds</module>
-        <module>qdata-api-ds</module>
-        <module>qdata-etl</module>
-        <module>qdata-quality</module>
-        <module>qdata-module-dm</module>
-        <module>qdata-mdule-ai</module>
+        <module>brick-framework</module>
+        <module>brick-module-system</module>
+        <module>brick-server</module>
+        <module>brick-module-att</module>
+        <module>brick-module-dp</module>
+        <module>brick-module-dpp</module>
+        <module>brick-module-da</module>
+        <module>brick-module-ds</module>
+        <module>brick-api-ds</module>
+        <module>brick-etl</module>
+        <module>brick-quality</module>
+        <module>brick-module-dm</module>
+        <module>brick-mdule-ai</module>
     </modules>
     <packaging>pom</packaging>
 
