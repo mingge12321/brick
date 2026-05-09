@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.quartz.mapper.SysJobMapper">
+<mapper namespace="tech.gjsl.qdata.quartz.mapper.SysJobMapper">
 
 	<resultMap type="SysJob" id="SysJobResult">
 		<id     property="jobId"          column="job_id"          />
@@ -70,7 +70,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 			<choose>
 				<!-- 如果数据库是 kingBase -->
-				<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+				<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 					<if test="jobName != null and jobName != ''">
 						AND job_name LIKE '%' || #{jobName} || '%'
 					</if>

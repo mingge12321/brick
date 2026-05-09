@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.system.ca.mapper.CaSubjectMapper">
+<mapper namespace="tech.gjsl.qdata.module.system.ca.mapper.CaSubjectMapper">
 
     <resultMap type="CaSubject" id="CaSubjectResult">
         <result property="id"    column="id"    />
@@ -77,7 +77,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
             <choose>
                 <!-- 如果数据库是 kingBase -->
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
                     <if test="name != null  and name != ''"> and name like '%' || #{name} || '%'</if>
                 </when>
 

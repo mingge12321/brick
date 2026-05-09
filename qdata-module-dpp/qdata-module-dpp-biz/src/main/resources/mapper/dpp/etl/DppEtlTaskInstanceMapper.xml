@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.dpp.dal.mapper.etl.DppEtlTaskInstanceMapper">
+<mapper namespace="tech.gjsl.qdata.module.dpp.dal.mapper.etl.DppEtlTaskInstanceMapper">
 
     <resultMap type="DppEtlTaskInstanceDO" id="DppEtlTaskInstanceResult">
         <result property="id" column="ID"/>
@@ -238,10 +238,10 @@
     </select>
 
     <resultMap id="treeListMap"
-               type="tech.qiantong.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskInstanceTreeListRespVO">
+               type="tech.gjsl.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskInstanceTreeListRespVO">
         <result property="id" column="ID"/>
         <collection property="children" column="ID"
-                    select="tech.qiantong.qdata.module.dpp.dal.mapper.etl.DppEtlTaskInstanceMapper.nodeListByTaskInstanceId"/>
+                    select="tech.gjsl.qdata.module.dpp.dal.mapper.etl.DppEtlTaskInstanceMapper.nodeListByTaskInstanceId"/>
     </resultMap>
 
     <select id="treeList" resultMap="treeListMap">
@@ -281,26 +281,26 @@
         </if>
         <if test="params.startTime!=null and params.startTime!=''">
             <choose>
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                     AND ti.START_TIME >= STR_TO_DATE(#{params.startTime},'%Y-%m-%d %H:%i:%s')
                 </when>
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                     AND ti.START_TIME >= TO_DATE(#{params.startTime},'YYYY-MM-DD HH24:MI:SS')
                 </when>
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
                     AND ti.START_TIME >= to_timestamp(#{params.startTime},'YYYY-MM-DD HH24:MI:SS')
                 </when>
             </choose>
         </if>
         <if test="params.endTime!=null and params.endTime!=''">
             <choose>
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                     AND STR_TO_DATE(#{params.endTime},'%Y-%m-%d %H:%i:%s') >= ti.END_TIME
                 </when>
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                     AND TO_DATE(#{params.endTime},'YYYY-MM-DD HH24:MI:SS') >= ti.END_TIME
                 </when>
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
                     AND to_timestamp(#{params.endTime},'YYYY-MM-DD HH24:MI:SS') >= ti.END_TIME
                 </when>
             </choose>
@@ -308,7 +308,7 @@
         ORDER BY ti.START_TIME DESC
     </select>
     <select id="nodeListByTaskInstanceId"
-            resultType="tech.qiantong.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskInstanceTreeListRespVO"
+            resultType="tech.gjsl.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskInstanceTreeListRespVO"
             parameterType="java.lang.Long">
         SELECT *
         FROM (
@@ -365,7 +365,7 @@
         ORDER BY d.START_TIME DESC
     </select>
     <select id="listSubNodeInstance"
-            resultType="tech.qiantong.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskInstanceTreeListRespVO">
+            resultType="tech.gjsl.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskInstanceTreeListRespVO">
         SELECT ni.ID,
                ni.NAME,
                il.NAME      AS taskName,

@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.system.mapper.SysPostMapper">
+<mapper namespace="tech.gjsl.qdata.module.system.mapper.SysPostMapper">
 
 	<resultMap type="SysPost" id="SysPostResult">
 		<id     property="postId"        column="post_id"       />
@@ -59,7 +59,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<where>
 			<choose>
 				<!-- 如果数据库是 kingBase -->
-				<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+				<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 					<if test="postCode != null and postCode != ''">
 						AND post_code LIKE '%' || #{postCode} || '%'
 					</if>

@@ -42,10 +42,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 #if($table.crud || $table.sub)
-import tech.qiantong.qdata.common.core.domain.BaseEntity;
+import tech.gjsl.qdata.common.core.domain.BaseEntity;
 #elseif($table.tree)
-##import tech.qiantong.qdata.common.core.domain.TreeEntity;
-import tech.qiantong.qdata.common.core.domain.BaseEntity;
+##import tech.gjsl.qdata.common.core.domain.TreeEntity;
+import tech.gjsl.qdata.common.core.domain.BaseEntity;
 #end
 
 /**

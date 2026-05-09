@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.system.mapper.SysConfigMapper">
+<mapper namespace="tech.gjsl.qdata.module.system.mapper.SysConfigMapper">
 
     <resultMap type="SysConfig" id="SysConfigResult">
     	<id     property="configId"      column="config_id"      />
@@ -78,7 +78,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</if>
             <choose>
                 <!-- 如果数据库是 kingBase -->
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
                     <if test="configName != null and configName != ''">
                         AND config_name LIKE '%' || #{configName} || '%'
                     </if>

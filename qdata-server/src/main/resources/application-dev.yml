@@ -30,20 +30,20 @@
 
 # 主数据源选择
 datasource:
-  type: mysql
+  type: dm8
 
 # Spring配置
 spring:
   # redis 配置
   redis:
     # 地址
-    host: 127.0.0.1
+    host: 10.75.13.58
     # 端口，默认为6379
     port: 6379
     # 数据库索引
     database: 0
     # 密码
-    password:
+    password: J98%FHF#9h@e88h9fre9
     # 连接超时时间
     timeout: 10s
     lettuce:
@@ -57,10 +57,10 @@ spring:
         # #连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1ms
   rabbitmq:
-    host: 127.0.0.1
+    host: bigdata002
     port: 5672
-    username: 账号
-    password: 密码
+    username: admin
+    password: Ej^iUNFLp9MQouc1
     listener:
       simple:
         acknowledge-mode: manual
@@ -139,11 +139,11 @@ dm8:
   # JDBC驱动类名
   driver-class-name: dm.jdbc.driver.DmDriver
   # 主库JDBC连接URL
-  url: jdbc:dm://127.0.0.1:5236/QDATA?STU&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&schema=QDATA&serverTimezone=Asia/Shanghai
+  url: jdbc:dm://bigdata002:5236/QDATA?STU&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&schema=QDATA&serverTimezone=Asia/Shanghai
   # 主库用户名
   username: QDATA
   # 主库密码
-  password: 密码
+  password: s2LKr6LMQxVDTQx
 
 # 人大金仓配置文件
 kingbase8:
@@ -170,9 +170,9 @@ oracle:
 # 调度器相关配置
 ds:
   # 调度器api前缀
-  base_url: http://127.0.0.1:12345/dolphinscheduler
+  base_url: http://bigdata002:12345/dolphinscheduler
   # 数据质量服务组件HTTP地址
-  quality_url: http://127.0.0.1:8083/quality/qualityTaskExecutor/runExecuteTask
+  quality_url: http://bigdata002:8083/quality/qualityTaskExecutor/runExecuteTask
   # 数据质量任务dolphinscheduler项目编码
   http_quality_projectCode: 134799536571008
   # 调度器令牌（可以自行修改）
@@ -182,26 +182,26 @@ ds:
   # spark相关配置
   spark:
     #spark-master的地址
-    master_url: spark://127.0.0.1:7077
+    master_url: spark://bigdata002:7077
     #jar包在ds的路径
     main_jar: file:/dolphinscheduler/default/resources/spark-jar/qdata-etl.jar
     #jar main入口
-    main_class: tech.qiantong.qdata.spark.etl.EtlApplication
+    main_class: tech.gjsl.qdata.spark.etl.EtlApplication
   # hdfs相关配置
   hdfs:
     #NameNode RPC地址（客户端连接 HDFS 的入口地址）
-    url: hdfs://127.0.0.1:8020
+    url: hdfs://bigdata002:8020
   # 调度器 Redis 配置（用于获取最新数据源信息，保障任务执行）
   redis:
     # 地址
-    host: 127.0.0.1
+    host: bigdata002
     # 端口，默认为6379
     port: 12138
     # 数据库索引
     database: 0
     # 密码
-    password:
+    password: J98%FHF#9h@e88h9fre9
 
 path:
   # 数据质量服务前缀
-  quality_url: http://127.0.0.1:8083/quality/qualityTaskExecutor
+  quality_url: http://bigdata002:8083/quality/qualityTaskExecutor

@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.ai.dal.mapper.chat.AiChatMessageMapper">
+<mapper namespace="tech.gjsl.qdata.module.ai.dal.mapper.chat.AiChatMessageMapper">
 
     <resultMap type="AiChatMessageDO" id="AiChatMessageResult">
         <result property="id"    column="ID"    />

@@ -36,7 +36,7 @@ package ${packageName}.domain;
 import ${import};
 #end
 import lombok.Data;
-import tech.qiantong.qdata.common.annotation.Excel;
+import tech.gjsl.qdata.common.annotation.Excel;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

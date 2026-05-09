@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.dpp.dal.mapper.etl.DppEtlNodeLogMapper">
+<mapper namespace="tech.gjsl.qdata.module.dpp.dal.mapper.etl.DppEtlNodeLogMapper">
 
     <resultMap type="DppEtlNodeLogDO" id="DppEtlNodeLogResult">
         <result property="id"    column="ID"    />

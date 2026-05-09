@@ -36,7 +36,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>brick</artifactId>
-        <groupId>tech.qiantong</groupId>
+        <groupId>tech.gjsl</groupId>
         <version>${qdata.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -57,42 +57,42 @@
 
     <dependencies>
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-da-api</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-att-api</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <!-- 核心模块 config-->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-config</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <!-- 系统模块 mybatis -->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-mybatis</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <!-- 系统模块 redis -->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-redis</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <!-- 通用工具-->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-common</artifactId>
             <exclusions>
                 <exclusion>
@@ -109,7 +109,7 @@
 
         <!-- 文件上传-->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-file</artifactId>
             <version>${qdata.version}</version>
         </dependency>
@@ -151,10 +151,10 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <!-- 限制只处理 tech.qiantong 相关的依赖 -->
+                            <!-- 限制只处理 tech.gjsl 相关的依赖 -->
                             <artifactSet>
                                 <includes>
-                                    <include>tech.qiantong:*:*</include> <!-- 只包括 tech.qiantong 开头的所有依赖 -->
+                                    <include>tech.gjsl:*:*</include> <!-- 只包括 tech.gjsl 开头的所有依赖 -->
                                 </includes>
                             </artifactSet>
 
@@ -206,8 +206,8 @@
                 <version>2.5.15</version>
                 <configuration>
                     <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
-                    <!-- 排除 `tech.qiantong` 下的所有模块 -->
-                    <excludeGroupIds>tech.qiantong</excludeGroupIds>
+                    <!-- 排除 `tech.gjsl` 下的所有模块 -->
+                    <excludeGroupIds>tech.gjsl</excludeGroupIds>
                 </configuration>
                 <executions>
                     <execution>

@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.system.ca.mapper.CaCertMapper">
+<mapper namespace="tech.gjsl.qdata.module.system.ca.mapper.CaCertMapper">
 
     <resultMap type="CaCert" id="CaCertResult">
         <result property="id"    column="id"    />
@@ -66,7 +66,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="subjectId != null "> and subject_id = #{subjectId}</if>
             <choose>
                 <!-- 如果数据库是 kingBase -->
-                <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+                <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
                     <if test="name != null  and name != ''"> and name like '%' || #{name} || '%'</if>
                     <if test="subjectName != null  and subjectName != ''"> and subject_name like '%' || #{subjectName} || '%'</if>
                 </when>

@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.dpp.dal.mapper.etl.DppEtlTaskMapper">
+<mapper namespace="tech.gjsl.qdata.module.dpp.dal.mapper.etl.DppEtlTaskMapper">
 
     <resultMap type="DppEtlTaskDO" id="DppEtlTaskResult">
         <result property="id"    column="ID"    />
@@ -209,7 +209,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                           ON (node.CODE = rel.PRE_NODE_CODE OR node.CODE = rel.POST_NODE_CODE)
             WHERE
                 <choose>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                         CAST(
                             SUBSTRING_INDEX(
                                 SUBSTRING_INDEX(
@@ -222,7 +222,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                             ) AS UNSIGNED
                         )
                     </when>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                         TO_NUMBER(
                         REGEXP_SUBSTR(node.PARAMETERS,
                         '"subTaskId"[[:space:]]*:[[:space:]]*([0-9]+)',
@@ -251,13 +251,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                           ON (node.CODE = rel.PRE_NODE_CODE OR node.CODE = rel.POST_NODE_CODE)
             WHERE
                 <choose>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                         CAST(
                             JSON_UNQUOTE(JSON_EXTRACT(node.PARAMETERS, '$.datasourceId'))
                             AS UNSIGNED
                         )
                     </when>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                                 TO_NUMBER(
                                 REGEXP_SUBSTR(node.PARAMETERS,
                                 '"datasourceId"[[:space:]]*:[[:space:]]*([0-9]+)',
@@ -283,7 +283,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                         ON (node.CODE = rel.PRE_NODE_CODE OR node.CODE = rel.POST_NODE_CODE)
                 WHERE
                 <choose>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                         CAST(
                             SUBSTRING_INDEX(
                                 SUBSTRING_INDEX(
@@ -308,7 +308,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                             ) AS UNSIGNED
                         )
                     </when>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                         TO_NUMBER(
                         REGEXP_SUBSTR(node.PARAMETERS,
                         '"clmt"[[:space:]]*:[[:space:]]*"?([0-9]+)"?',
@@ -329,7 +329,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             );
     </select>
 
-    <select id="getDppEtlTaskPage" resultType="tech.qiantong.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskRespVO">
+    <select id="getDppEtlTaskPage" resultType="tech.gjsl.qdata.module.dpp.controller.admin.etl.vo.DppEtlTaskRespVO">
         SELECT
             t.*,
             cu.NICK_NAME AS personChargeName,
@@ -341,10 +341,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             ti.STATUS AS lastExecuteStatus
             <if test="params.type == '3'.toString()">
                 <choose>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                         ,JSON_VALUE(t.DRAFT_JSON, '$.typaCode') AS datasourceType
                     </when>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                         ,JSON_EXTRACT(t.DRAFT_JSON, '$.typaCode') AS datasourceType
                     </when>
                 </choose>
@@ -413,20 +413,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                 <choose>
                     <when test="params.processType == '1'.toString()">
                         <choose>
-                            <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                            <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                                 AND JSON_VALUE(t.DRAFT_JSON, '$.typaCode') = 'FlinkStream'
                             </when>
-                            <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                            <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                                 AND JSON_EXTRACT(t.DRAFT_JSON, '$.typaCode') = 'FlinkStream'
                             </when>
                         </choose>
                     </when>
                     <when test="params.processType == '2'.toString()">
                         <choose>
-                            <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                            <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                                 AND JSON_VALUE(t.DRAFT_JSON, '$.typaCode') != 'FlinkStream'
                             </when>
-                            <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                            <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                                 AND JSON_EXTRACT(t.DRAFT_JSON, '$.typaCode') != 'FlinkStream'
                             </when>
                         </choose>
@@ -435,10 +435,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             </if>
             <if test="params.type == '3'.toString() and params.datasourceType != null and params.datasourceType != ''">
                 <choose>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
                         AND JSON_VALUE(t.DRAFT_JSON, '$.typaCode') = #{params.datasourceType}
                     </when>
-                    <when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+                    <when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
                         AND JSON_EXTRACT(t.DRAFT_JSON, '$.typaCode') = #{params.datasourceType}
                     </when>
                 </choose>

@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.dp.dal.mapper.document.DpDocumentMapper">
+<mapper namespace="tech.gjsl.qdata.module.dp.dal.mapper.document.DpDocumentMapper">
 
     <resultMap type="DpDocumentDO" id="DpDocumentResult">
         <result property="id"    column="ID"    />
@@ -89,7 +89,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         where ID = #{ID}
     </select>
     <select id="getDpDocumentSearchPage"
-            resultType="tech.qiantong.qdata.module.dp.controller.admin.document.vo.DpDocumentSearchRespVO">
+            resultType="tech.gjsl.qdata.module.dp.controller.admin.document.vo.DpDocumentSearchRespVO">
         SELECT
             '1' AS dataType,
             t.ID,

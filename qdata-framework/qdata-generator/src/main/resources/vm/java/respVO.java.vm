@@ -38,7 +38,7 @@ import ${import};
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import io.swagger.v3.oas.annotations.media.Schema;
-import tech.qiantong.qdata.common.annotation.Excel;
+import tech.gjsl.qdata.common.annotation.Excel;
 import java.util.Date;
 import java.io.Serializable;
 #if($table.crud || $table.sub)

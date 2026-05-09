@@ -36,7 +36,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>qdata-module-ds</artifactId>
-        <groupId>tech.qiantong</groupId>
+        <groupId>tech.gjsl</groupId>
         <version>${qdata.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -50,7 +50,7 @@
     <dependencies>
         <!-- 通用工具-->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-common</artifactId>
         </dependency>
     </dependencies>

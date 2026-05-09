@@ -35,12 +35,12 @@ package ${packageName}.dal.mapper.${moduleName};
 import ${packageName}.dal.dataobject.${moduleName}.${ClassName}DO;
 import java.util.Arrays;
 import com.github.yulichang.base.MPJBaseMapper;
-import tech.qiantong.qdata.common.core.page.PageResult;
+import tech.gjsl.qdata.common.core.page.PageResult;
 import java.util.HashSet;
 import java.util.Set;
 import ${packageName}.controller.admin.${moduleName}.vo.${ClassName}PageReqVO;
-import tech.qiantong.qdata.mybatis.core.mapper.BaseMapperX;
-import tech.qiantong.qdata.mybatis.core.query.LambdaQueryWrapperX;
+import tech.gjsl.qdata.mybatis.core.mapper.BaseMapperX;
+import tech.gjsl.qdata.mybatis.core.query.LambdaQueryWrapperX;
 #if($table.sub)
 import ${packageName}.domain.${subClassName};
 #end

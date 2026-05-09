@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.ds.dal.mapper.apiLog.DsApiLogMapper">
+<mapper namespace="tech.gjsl.qdata.module.ds.dal.mapper.apiLog.DsApiLogMapper">
 
     <resultMap type="DsApiLogDO" id="DsApiLogResult">
         <result property="id"    column="ID"    />
@@ -74,7 +74,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </where>
     </select>
 
-    <select id="selectDsApiLogByID" parameterType="Long" resultType="tech.qiantong.qdata.module.ds.dal.dataobject.apiLog.DsApiLogDO">
+    <select id="selectDsApiLogByID" parameterType="Long" resultType="tech.gjsl.qdata.module.ds.dal.dataobject.apiLog.DsApiLogDO">
         select dal.*, ds.NAME as apiName,ds.REQ_METHOD as reqMethod  from DS_API_LOG dal
                join  DS_API ds on ds.ID = dal.API_ID
         where dal.ID = #{id}

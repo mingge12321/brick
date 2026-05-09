@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.system.mapper.SysMenuMapper">
+<mapper namespace="tech.gjsl.qdata.module.system.mapper.SysMenuMapper">
 
 	<resultMap type="SysMenu" id="SysMenuResult">
 		<id     property="menuId"         column="menu_id"        />
@@ -71,7 +71,7 @@
 		<where>
 			<choose>
 				<!-- 如果数据库是 kingBase -->
-				<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+				<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 					<if test="menuName != null and menuName != ''">
 						AND menu_name LIKE '%' || #{menuName} || '%'
 					</if>

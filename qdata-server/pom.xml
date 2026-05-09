@@ -36,7 +36,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>brick</artifactId>
-        <groupId>tech.qiantong</groupId>
+        <groupId>tech.gjsl</groupId>
         <version>${qdata.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -50,55 +50,55 @@
     <dependencies>
         <!-- 系統模块 -->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-system-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-att-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-da-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-dp-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-dpp-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-ds-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-api-ds-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-dm-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-module-ai-biz</artifactId>
             <version>${qdata.version}</version>
         </dependency>

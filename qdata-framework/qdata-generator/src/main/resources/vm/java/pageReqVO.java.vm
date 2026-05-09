@@ -37,7 +37,7 @@ import ${import};
 #end
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-import tech.qiantong.qdata.common.core.page.PageParam;
+import tech.gjsl.qdata.common.core.page.PageParam;
 #if($table.crud || $table.sub)
 #elseif($table.tree)
 #end

@@ -180,7 +180,7 @@ ds:
  spark:
    master_url: spark://127.0.0.1:7077  # 与Spark Master地址一致
    main_jar: file:/dolphinscheduler/default/resources/spark-jar/qdata-etl-3.8.8.jar  # 上传etl包后路径
-   main_class: tech.qiantong.qdata.spark.etl.EtlApplication
+   main_class: tech.gjsl.qdata.spark.etl.EtlApplication
 ```
 
 ### 3.4. 初始化数据库

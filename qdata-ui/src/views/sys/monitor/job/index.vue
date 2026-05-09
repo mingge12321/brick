@@ -221,7 +221,7 @@
                               <template #content>
                                  <div>
                                     Bean调用示例：bfTask.bfParams('bf')
-                                    <br />Class类调用示例：tech.qiantong.quartz.task.BfTask.bfParams('bf')
+                                    <br />Class类调用示例：tech.gjsl.quartz.task.BfTask.bfParams('bf')
                                     <br />参数说明：支持字符串，布尔类型，长整型，浮点型，整型
                                  </div>
                               </template>

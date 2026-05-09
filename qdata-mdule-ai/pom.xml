@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>brick</artifactId>
-        <groupId>tech.qiantong</groupId>
+        <groupId>tech.gjsl</groupId>
         <version>${qdata.version}</version>
     </parent>
 

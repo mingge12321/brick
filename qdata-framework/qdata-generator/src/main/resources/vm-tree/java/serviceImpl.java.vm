@@ -35,7 +35,7 @@ package ${packageName}.service.impl;
 import java.util.List;
 #foreach ($column in $columns)
 #if($column.javaField == 'createTime' || $column.javaField == 'updateTime')
-import tech.qiantong.qdata.common.utils.DateUtils;
+import tech.gjsl.qdata.common.utils.DateUtils;
 #break
 #end
 #end
@@ -43,7 +43,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 #if($table.sub)
 import java.util.ArrayList;
-import tech.qiantong.qdata.common.utils.StringUtils;
+import tech.gjsl.qdata.common.utils.StringUtils;
 import org.springframework.transaction.annotation.Transactional;
 import ${packageName}.domain.${subClassName};
 #end

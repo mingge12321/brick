@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.generator.mapper.GenTableMapper">
+<mapper namespace="tech.gjsl.qdata.generator.mapper.GenTableMapper">
 
 	<resultMap type="GenTable" id="GenTableResult">
 	    <id     property="tableId"        column="table_id"          />
@@ -95,7 +95,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<where>
 			<choose>
 				<!-- 如果数据库是 kingBase -->
-				<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+				<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 					<if test="tableName != null and tableName != ''">
 						AND lower(table_name) LIKE lower('%' || #{tableName} || '%')
 					</if>
@@ -132,13 +132,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="selectDbTableList" parameterType="GenTable" resultMap="GenTableResult">
 		<choose>
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
 				select table_name, table_comment, create_time, update_time from information_schema.tables
 				where table_schema = (select database())
 				AND table_name NOT LIKE 'qrtz\_%' AND table_name NOT LIKE 'gen\_%'
 				AND table_name NOT IN (select table_name from gen_table)
 			</when>
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
 				SELECT t.table_name,
 				c.comments AS table_comment,
 				o.created AS create_time,
@@ -150,7 +150,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				AND t.table_name NOT LIKE 'GEN_%'
 				AND t.table_name NOT IN (SELECT table_name FROM gen_table)
 			</when>
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 				SELECT
 				t.table_name,
 				COALESCE(pd.description, '') AS table_comment,  -- 获取表的注释，如果没有注释则返回空字符串
@@ -173,7 +173,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</choose>
 
 		<choose>
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 				<if test="tableName != null and tableName != ''">
 					AND lower(table_name) LIKE lower('%' || #{tableName} || '%')
 				</if>
@@ -209,12 +209,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="selectDbTableListByNames" resultMap="GenTableResult">
 		<choose>
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'mysql'">
 				select table_name, table_comment, create_time, update_time from information_schema.tables
 				where table_name NOT LIKE 'qrtz\_%' and table_name NOT LIKE 'gen\_%' and table_schema = (select database())
 				and table_name in
 			</when>
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'dm8'">
 				SELECT t.table_name,
 				c.comments AS table_comment,
 				o.created AS create_time,
@@ -227,7 +227,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				AND t.table_name IN
 			</when>
 			<!-- 人大金仓 (KingbaseES) -->
-			<when test="@tech.qiantong.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
+			<when test="@tech.gjsl.qdata.mybatis.config.MasterDataSourceConfig@getDatabaseType() == 'kingbase8'">
 				SELECT
 				t.table_name,
 				COALESCE(pd.description, '') AS table_comment,  -- 获取表注释，如果没有则返回空字符串

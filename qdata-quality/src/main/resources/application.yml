@@ -64,7 +64,7 @@ server:
 # 日志配置
 logging:
   level:
-    tech.qiantong: debug
+    tech.gjsl: debug
     org.springframework: warn
 
 # 用户配置
@@ -125,7 +125,7 @@ token:
 # MyBatis配置
 # mybatis:
   # 搜索指定包别名
-  # typeAliasesPackage: tech.qiantong.**.domain
+  # typeAliasesPackage: tech.gjsl.**.domain
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
   # mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 加载全局的配置文件
@@ -134,7 +134,7 @@ token:
 # MyBatis Plus配置
 mybatis-plus:
   # 搜索指定包别名
-  typeAliasesPackage: tech.qiantong.**.dataobject,tech.qiantong.**.dataobject.assetchild, tech.qiantong.**.domain
+  typeAliasesPackage: tech.gjsl.**.dataobject,tech.gjsl.**.dataobject.assetchild, tech.gjsl.**.domain
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 加载全局的配置文件
@@ -196,13 +196,13 @@ springdoc:
   group-configs:
     - group: 'system'
       paths-to-match: '/**'
-      packages-to-scan: tech.qiantong.qdata.module.system.controller
+      packages-to-scan: tech.gjsl.qdata.module.system.controller
     - group: 'example'
       paths-to-match: '/**'
-      packages-to-scan: tech.qiantong.qdata.module.example.controller
+      packages-to-scan: tech.gjsl.qdata.module.example.controller
     - group: 'ai'
       paths-to-match: '/**'
-      packages-to-scan: tech.qiantong.qdata.module.ai.controller
+      packages-to-scan: tech.gjsl.qdata.module.ai.controller
 # Swagger 增强配置
 knife4j:
   enable: true

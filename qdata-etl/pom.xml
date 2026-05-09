@@ -36,7 +36,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>brick</artifactId>
-        <groupId>tech.qiantong</groupId>
+        <groupId>tech.gjsl</groupId>
         <version>${qdata.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -193,7 +193,7 @@
 
         <!-- common -->
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-common</artifactId>
             <version>${qdata.version}</version>
             <exclusions>
@@ -257,13 +257,13 @@
         </dependency>
 
         <dependency>
-            <groupId>tech.qiantong</groupId>
+            <groupId>tech.gjsl</groupId>
             <artifactId>qdata-api-ds-api</artifactId>
             <version>${qdata.version}</version>
             <scope>compile</scope>
             <exclusions>
                 <exclusion>
-                    <groupId>tech.qiantong</groupId>
+                    <groupId>tech.gjsl</groupId>
                     <artifactId>qdata-common</artifactId>
                 </exclusion>
             </exclusions>

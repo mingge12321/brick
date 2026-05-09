@@ -34,7 +34,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.qiantong.qdata.module.ds.dal.mapper.api.DsApiMapper">
+<mapper namespace="tech.gjsl.qdata.module.ds.dal.mapper.api.DsApiMapper">
 
     <resultMap type="DsApiDO" id="DsApiResult">
         <result property="id"    column="ID"    />
