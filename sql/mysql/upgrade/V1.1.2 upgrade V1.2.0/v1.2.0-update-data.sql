@@ -128,11 +128,11 @@ SET `menu_name`='标准登记', `parent_id`=2694, `order_num`=0, `path`='documen
 WHERE `menu_id`=2674;
 
 UPDATE `qdata`.`system_menu`
-SET `menu_name`='标准数据元', `parent_id`=2694, `order_num`=9, `path`='dataElem', `component`='dp/dataElem/index', `query`=NULL, `is_frame`=1, `is_cache`=0, `route_name`=NULL, `menu_type`='C', `visible`='0', `status`='0', `perms`='dp:dataElem:list', `icon`='hard-drive-3-line', `create_by`='qData', `create_time`='2025-01-21 14:53:06', `update_by`='admin', `update_time`='2026-03-27 16:52:05', `remark`='数据元菜单'
+SET `menu_name`='标准数据元', `parent_id`=2694, `order_num`=9, `path`='dataElem', `component`='dp/dataElem/index', `query`=NULL, `is_frame`=1, `is_cache`=0, `route_name`=NULL, `menu_type`='C', `visible`='0', `status`='0', `perms`='dp:dataElem:list', `icon`='hard-drive-3-line', `create_by`='Platform', `create_time`='2025-01-21 14:53:06', `update_by`='admin', `update_time`='2026-03-27 16:52:05', `remark`='数据元菜单'
 WHERE `menu_id`=2315;
 
 UPDATE `qdata`.`system_menu`
-SET `menu_name`='创建模型', `parent_id`=2730, `order_num`=1, `path`='create', `component`='dp/model/index', `query`=NULL, `is_frame`=1, `is_cache`=0, `route_name`=NULL, `menu_type`='C', `visible`='0', `status`='0', `perms`='dp:model:list', `icon`=NULL, `create_by`='qData', `create_time`='2025-01-21 11:03:26', `update_by`='admin', `update_time`='2026-03-27 16:56:53', `remark`='逻辑模型菜单'
+SET `menu_name`='创建模型', `parent_id`=2730, `order_num`=1, `path`='create', `component`='dp/model/index', `query`=NULL, `is_frame`=1, `is_cache`=0, `route_name`=NULL, `menu_type`='C', `visible`='0', `status`='0', `perms`='dp:model:list', `icon`=NULL, `create_by`='Platform', `create_time`='2025-01-21 11:03:26', `update_by`='admin', `update_time`='2026-03-27 16:56:53', `remark`='逻辑模型菜单'
 WHERE `menu_id`=2307;
 
 -- 插入菜单数据

@@ -10,7 +10,7 @@ docker buildx create \
 docker buildx inspect --bootstrap
 
 # 构建 AMD64（x86_64）版本
-cd /mnt/c/Users/Ming/Desktop/qData/qdata-server-ce # 路径改成你自己的路径
+cd /mnt/c/Users/Ming/Desktop/brick/qdata-server-ce # 路径改成你自己的路径
 
 docker buildx build \
   --platform linux/amd64 \
@@ -18,7 +18,7 @@ docker buildx build \
   -t crpi-kf13onfj0v8f6jax.cn-shanghai.personal.cr.aliyuncs.com/qiantongkeji/qdata-server-ce:1.3.0 \
   --file=docker/Dockerfile \
   --load \
-  /mnt/c/Users/Ming/Desktop/qData/qdata-server-ce # 上下文路径改成你自己的路径
+  /mnt/c/Users/Ming/Desktop/brick/qdata-server-ce # 上下文路径改成你自己的路径
 
 # 构建 ARM64（适配鲲鹏、飞腾、树莓派等 ARM 服务器）
 docker buildx build \
@@ -27,7 +27,7 @@ docker buildx build \
   -t crpi-kf13onfj0v8f6jax.cn-shanghai.personal.cr.aliyuncs.com/qiantongkeji/qdata-server-ce:1.3.0 \
   --file=docker/Dockerfile \
   --load \
-  /mnt/c/Users/Ming/Desktop/qData/qdata-server-ce # 上下文路径改成你自己的路径
+  /mnt/c/Users/Ming/Desktop/brick/qdata-server-ce # 上下文路径改成你自己的路径
 
 # 检查是否支持 ARM64
 docker inspect crpi-kf13onfj0v8f6jax.cn-shanghai.personal.cr.aliyuncs.com/qiantongkeji/qdata-server-ce:1.3.0 --format '{{.Architecture}}'
